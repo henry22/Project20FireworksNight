@@ -15,6 +15,14 @@
 		BA6BB84C1B5FC78800ABC6E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB84B1B5FC78800ABC6E0 /* Images.xcassets */; };
 		BA6BB84F1B5FC78800ABC6E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB84D1B5FC78800ABC6E0 /* LaunchScreen.xib */; };
 		BA6BB85B1B5FC78800ABC6E0 /* Project20FireworksNightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB85A1B5FC78800ABC6E0 /* Project20FireworksNightTests.swift */; };
+		BA6BB86C1B5FC7D000ABC6E0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB8651B5FC7D000ABC6E0 /* background.png */; };
+		BA6BB86D1B5FC7D000ABC6E0 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB8661B5FC7D000ABC6E0 /* background@2x.png */; };
+		BA6BB86E1B5FC7D000ABC6E0 /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB8671B5FC7D000ABC6E0 /* explode.sks */; };
+		BA6BB86F1B5FC7D000ABC6E0 /* fuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB8681B5FC7D000ABC6E0 /* fuse.sks */; };
+		BA6BB8701B5FC7D000ABC6E0 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB8691B5FC7D000ABC6E0 /* rocket.png */; };
+		BA6BB8711B5FC7D000ABC6E0 /* rocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB86A1B5FC7D000ABC6E0 /* rocket@2x.png */; };
+		BA6BB8721B5FC7D000ABC6E0 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB86B1B5FC7D000ABC6E0 /* spark.png */; };
+		BA6BB8741B5FC7F100ABC6E0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB8731B5FC7F100ABC6E0 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,14 @@
 		BA6BB8541B5FC78800ABC6E0 /* Project20FireworksNightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project20FireworksNightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6BB8591B5FC78800ABC6E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6BB85A1B5FC78800ABC6E0 /* Project20FireworksNightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project20FireworksNightTests.swift; sourceTree = "<group>"; };
+		BA6BB8651B5FC7D000ABC6E0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		BA6BB8661B5FC7D000ABC6E0 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		BA6BB8671B5FC7D000ABC6E0 /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
+		BA6BB8681B5FC7D000ABC6E0 /* fuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fuse.sks; sourceTree = "<group>"; };
+		BA6BB8691B5FC7D000ABC6E0 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
+		BA6BB86A1B5FC7D000ABC6E0 /* rocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rocket@2x.png"; sourceTree = "<group>"; };
+		BA6BB86B1B5FC7D000ABC6E0 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		BA6BB8731B5FC7F100ABC6E0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,7 @@
 				BA6BB8421B5FC78800ABC6E0 /* GameScene.sks */,
 				BA6BB8441B5FC78800ABC6E0 /* GameScene.swift */,
 				BA6BB8461B5FC78800ABC6E0 /* GameViewController.swift */,
+				BA6BB8731B5FC7F100ABC6E0 /* Helper.swift */,
 				BA6BB8481B5FC78800ABC6E0 /* Main.storyboard */,
 				BA6BB84B1B5FC78800ABC6E0 /* Images.xcassets */,
 				BA6BB84D1B5FC78800ABC6E0 /* LaunchScreen.xib */,
@@ -96,6 +113,7 @@
 		BA6BB83E1B5FC78800ABC6E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB8641B5FC7D000ABC6E0 /* Content */,
 				BA6BB83F1B5FC78800ABC6E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -116,6 +134,20 @@
 				BA6BB8591B5FC78800ABC6E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA6BB8641B5FC7D000ABC6E0 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB8651B5FC7D000ABC6E0 /* background.png */,
+				BA6BB8661B5FC7D000ABC6E0 /* background@2x.png */,
+				BA6BB8671B5FC7D000ABC6E0 /* explode.sks */,
+				BA6BB8681B5FC7D000ABC6E0 /* fuse.sks */,
+				BA6BB8691B5FC7D000ABC6E0 /* rocket.png */,
+				BA6BB86A1B5FC7D000ABC6E0 /* rocket@2x.png */,
+				BA6BB86B1B5FC7D000ABC6E0 /* spark.png */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +230,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6BB8721B5FC7D000ABC6E0 /* spark.png in Resources */,
 				BA6BB84F1B5FC78800ABC6E0 /* LaunchScreen.xib in Resources */,
+				BA6BB86C1B5FC7D000ABC6E0 /* background.png in Resources */,
+				BA6BB86F1B5FC7D000ABC6E0 /* fuse.sks in Resources */,
+				BA6BB8701B5FC7D000ABC6E0 /* rocket.png in Resources */,
+				BA6BB86E1B5FC7D000ABC6E0 /* explode.sks in Resources */,
 				BA6BB84C1B5FC78800ABC6E0 /* Images.xcassets in Resources */,
+				BA6BB8711B5FC7D000ABC6E0 /* rocket@2x.png in Resources */,
 				BA6BB8431B5FC78800ABC6E0 /* GameScene.sks in Resources */,
+				BA6BB86D1B5FC7D000ABC6E0 /* background@2x.png in Resources */,
 				BA6BB84A1B5FC78800ABC6E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +261,7 @@
 				BA6BB8451B5FC78800ABC6E0 /* GameScene.swift in Sources */,
 				BA6BB8471B5FC78800ABC6E0 /* GameViewController.swift in Sources */,
 				BA6BB8411B5FC78800ABC6E0 /* AppDelegate.swift in Sources */,
+				BA6BB8741B5FC7F100ABC6E0 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +391,7 @@
 				INFOPLIST_FILE = Project20FireworksNight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -361,6 +402,7 @@
 				INFOPLIST_FILE = Project20FireworksNight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

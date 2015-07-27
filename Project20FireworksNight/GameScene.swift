@@ -9,34 +9,36 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    // use this to call the launchFireworks() method every six seconds
+    var gameTimer: NSTimer!
+    // This avoids accidental taps triggered by tapping on the fuse of a firework
+    var fireworks =  [SKNode]()
+    
+    // These three edges are used to define where we launch fireworks from
+    let leftEdge = -22
+    let bottomEdge = -22
+    let rightEdge = 1024 + 22
+    
+    // track the player's score
+    var score: Int = 0 {
+        didSet {
+            
+        }
+    }
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
         
-        self.addChild(myLabel)
+        let background = SKSpriteNode(imageNamed: "background")
+        background.position = CGPoint(x: 512, y: 384)
+        background.blendMode = .Replace
+        addChild(background)
+        
+        gameTimer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: "launchFireworks", userInfo: nil, repeats: true)
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
         
-        for touch in (touches as! Set<UITouch>) {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
     }
    
     override func update(currentTime: CFTimeInterval) {
