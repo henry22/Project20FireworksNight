@@ -37,7 +37,7 @@ class GameScene: SKScene {
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: "launchFireworks", userInfo: nil, repeats: true)
     }
     
-    func createFirework(xMovement: CGFloat, x: Int, y: Int) {
+    func createFirework(#xMovement: CGFloat, x: Int, y: Int) {
         
         //Create an SKNode that will act as the firework container, and place it at the X/Y position that was specified
         let node = SKNode()
@@ -81,6 +81,40 @@ class GameScene: SKScene {
         //Add the firework to our fireworks array and also to the scene
         fireworks.append(node)
         addChild(node)
+    }
+    
+    func launchFireworks() {
+        
+        let movementAmount: CGFloat = 1800
+        
+        switch RandomInt(min: 0, max: 3) {
+        case 0:
+            createFirework(xMovement: 0, x: 512, y: bottomEdge)
+            createFirework(xMovement: 0, x: 512 - 200, y: bottomEdge)
+            createFirework(xMovement: 0, x: 512 - 100, y: bottomEdge)
+            createFirework(xMovement: 0, x: 512 + 100, y: bottomEdge)
+            createFirework(xMovement: 0, x: 512 + 200, y: bottomEdge)
+        case 1:
+            createFirework(xMovement: 0, x: 512, y: bottomEdge)
+            createFirework(xMovement: -200, x: 512 - 200, y: bottomEdge)
+            createFirework(xMovement: -100, x: 512 - 100, y: bottomEdge)
+            createFirework(xMovement: 100, x: 512 + 100, y: bottomEdge)
+            createFirework(xMovement: 200, x: 512 + 200, y: bottomEdge)
+        case 2:
+            createFirework(xMovement: movementAmount, x: leftEdge, y: bottomEdge + 400)
+            createFirework(xMovement: movementAmount, x: leftEdge, y: bottomEdge + 300)
+            createFirework(xMovement: movementAmount, x: leftEdge, y: bottomEdge + 200)
+            createFirework(xMovement: movementAmount, x: leftEdge, y: bottomEdge + 100)
+            createFirework(xMovement: movementAmount, x: leftEdge, y: bottomEdge)
+        case 3:
+            createFirework(xMovement: -movementAmount, x: rightEdge, y: bottomEdge + 400)
+            createFirework(xMovement: -movementAmount, x: rightEdge, y: bottomEdge + 300)
+            createFirework(xMovement: -movementAmount, x: rightEdge, y: bottomEdge + 200)
+            createFirework(xMovement: -movementAmount, x: rightEdge, y: bottomEdge + 100)
+            createFirework(xMovement: -movementAmount, x: rightEdge, y: bottomEdge)
+        default:
+            break
+        }
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
