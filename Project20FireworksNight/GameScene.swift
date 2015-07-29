@@ -159,5 +159,16 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        
+        //loop through the array backwards rather than forwards, because the array items move down when you remove an item
+        for var i = fireworks.count - 1; i >= 0; --i {
+            let firework = fireworks[i]
+            
+            if firework.position.y > 900 {
+                //this uses a position high above so that rockets can explode off screen
+                fireworks.removeAtIndex(i)
+                firework.removeFromParent()
+            }
+        }
     }
 }
