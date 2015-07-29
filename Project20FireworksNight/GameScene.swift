@@ -117,8 +117,44 @@ class GameScene: SKScene {
         }
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    func checkForTouches(touches: Set<NSObject>) {
         
+        let touch = touches.first as! UITouch
+        
+        let location = touch.locationInNode(self)
+        let nodes = nodesAtPoint(location) as! [SKNode]
+        
+        for node in nodes {
+            if node.isKindOfClass(SKSpriteNode.self) {
+                let sprite = node as! SKSpriteNode
+                
+                if sprite.name == "firework" {
+                    //the inner loop ensure that the player can select only one firework color at a time
+                    for parent in fireworks {
+                        let firework = parent.children[0] as! SKSpriteNode
+                        
+                        if firework.name == "selected" && firework.color != sprite.color {
+                            firework.name == "firework"
+                            firework.colorBlendFactor = 1
+                        }
+                    }
+                    sprite.name == "selected"
+                    sprite.colorBlendFactor = 0
+                }
+            }
+        }
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        super.touchesBegan(touches, withEvent: event)
+        
+        checkForTouches(touches)
+    }
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        super.touchesMoved(touches, withEvent: event)
+        
+        checkForTouches(touches)
     }
    
     override func update(currentTime: CFTimeInterval) {
